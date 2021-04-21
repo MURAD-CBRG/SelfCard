@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>{{ params['data'][0] }}</h3>
+<img width="600" height="600" src="{{ url_for('static', filename=params['data'][1][0]) }}">
+{% for i in params['data'][1][1] %}
+    <h4>{{i}}</h4>
+{% endfor %}
+
+{% endblock %}
